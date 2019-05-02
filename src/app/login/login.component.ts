@@ -58,7 +58,11 @@ export class LoginComponent implements OnInit {
           this.submitting = false;
         });
     } else {
-      alert("Invalid!"); // show mesage กรณีกรอกข้อมูลไม่ครบใน input
+      Swal.fire({
+        type: "error",
+        title: "แจ้งเตือน",
+        text: "ข้อมูลผิดพลาด ไม่สามารถเข้าได้"
+      });
       this.submitting = false;
     }
   }
